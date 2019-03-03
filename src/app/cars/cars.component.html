@@ -1,0 +1,40 @@
+<p>Форма добавления машины</p>
+<hr>
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
+<hr>
+<div class="list-group">
+    <app-car class="list-group-item" *ngFor="let car of cars" [carItem]="car">
+        <h4 #carHeading class="list-group-item-heading">Название: {{ car.name }}</h4>
+        <p class="list-group-item-text"> Год:{{ car.year }}</p>
+    </app-car>
+</div>
+
+<!--************************************************************************************************-->
+<!--<p *ngIf="!addCarStat;else successStatus">Машина не добавлена</p>-->
+<!--<ng-template #successStatus>-->
+<!--<p>машина добавлена</p>-->
+<!--</ng-template>-->
+
+<!--<hr>-->
+<!--<ul>-->
+<!--<li *ngFor="let date of dates; let i=index">-->
+<!--&lt;!&ndash;<div [ngStyle]="{'background-color':(i+1)%2===0? 'red':'green','color':'white'}"&ndash;&gt;-->
+<!--&lt;!&ndash;[ngClass]="{'big-text': setBigCarText(car)}">&ndash;&gt;-->
+<!--<b>{{i+1}}</b> . - {{ date | uppercase }}-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--<p>{{ addCarStatus }}</p>-->
+<!--<app-car *ngFor="let car of cars"></app-car>-->
+
+<!--<hr>-->
+
+<!--<input type="text" class="form-control" #myInput (input)="onKeyUp(myInput.value)">-->
+<!--<p>{{ inputText }}</p>-->
+<!--<hr>-->
+<!--<input type="text" class="form-control" (keyup.enter)="onKeyUpEnter($event)">-->
+<!--<p>{{ inputTextEnter }}</p>-->
+<!--<input type="text" class="form-control" [(ngModel)]="inputTextEnter">-->
+
+
